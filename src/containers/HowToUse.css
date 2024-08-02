@@ -1,0 +1,9 @@
+.how-to-use-container {
+    background: #d1d1d1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  

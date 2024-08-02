@@ -1,0 +1,84 @@
+.app-intro-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-container {
+  flex: 0.7;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.phone-frame {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 9 / 19.5;
+  position: relative;
+}
+
+.appintro-slider-container {
+  position: absolute;
+  top: 6%;  /* 스크린 위치 조정 */
+  left: 6%;  /* 스크린 위치 조정 */
+  width: 88%; /* 너비 조정 */
+  height: 88%; /* 높이 조정 */
+  border-radius: 40px;
+  overflow: hidden; /* 테두리를 넘지 않도록 숨김 */
+}
+
+.screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 이미지가 잘리지 않도록 조정 */
+}
+
+.iphone-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/images/iphone.png') no-repeat center center;
+  background-size: contain;
+  pointer-events: none; /* 사용자 상호작용 차단 */
+}
+
+.appintro-text-container {
+  flex: 1.3;
+  padding: 20px 40px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 650px;
+}
+
+.appintro-text-container h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: 'Do Hyeon', sans-serif; /* Do Hyeon 폰트 적용 */
+}
+
+.appintro-text-container h2 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.appintro-text-container p {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.appintro-text-container p, .appintro-text-container h2 {
+  font-family: 'Noto Sans KR', sans-serif; /* Noto Sans KR 폰트 적용 */
+  line-height: 1.6;
+}

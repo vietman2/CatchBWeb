@@ -1,0 +1,35 @@
+.footer-container {
+  background: #333;
+  color: white;
+  padding: 40px 80px;
+  display: flex;
+  justify-content: flex-start; /* 전체 컨테이너를 왼쪽으로 정렬 */
+}
+
+.footer-text-container {
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+}
+
+.footer-text-container .footer-head {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-text-container p {
+  font-size: 14px;
+  color: #d9d9d9;
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px; /* 링크 간격 조정 */
+  margin-top: 10px; /* 링크 상단 마진 */
+}
+
+.footer-link {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
