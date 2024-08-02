@@ -1,4 +1,3 @@
-const react = require("eslint-plugin-react");
 const tseslint = require("typescript-eslint");
 const globals = require("globals");
 const reactPlugin = require("eslint-plugin-react");
@@ -11,9 +10,6 @@ module.exports = [
       "**/*.config.js",
       "node_modules/**",
     ],
-    plugins: {
-      react,
-    },
     languageOptions: {
       ...reactPlugin.configs.flat.recommended.languageOptions,
       parserOptions: {
