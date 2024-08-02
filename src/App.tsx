@@ -1,4 +1,3 @@
-import React from 'react';
 import { Element } from 'react-scroll';
 import Header from './containers/Header'; // Header 컴포넌트 추가
 import AppIntro from './containers/AppIntro';
