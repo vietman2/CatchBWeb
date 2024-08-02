@@ -1676,6 +1676,16 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz#4fc56c15c580b9adb7dc3c333a134e540b44bfb1"
   integrity sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==
 
+"@microsoft/eslint-formatter-sarif@2.1.7":
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/@microsoft/eslint-formatter-sarif/-/eslint-formatter-sarif-2.1.7.tgz#b6a1aef804b486e869214d620ccb7f461ae477d1"
+  integrity sha512-gDNc2elHjX0eqk34HxxRxEwEL49SrvXImOoK1bZHq7IDYfuY1xY/CUx8/gOWgvwf6Qv2Yy3HirzjIvKXKH82vQ==
+  dependencies:
+    eslint "^8.9.0"
+    jschardet latest
+    lodash "^4.17.14"
+    utf8 "^3.0.0"
+
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
   resolved "https://registry.yarnpkg.com/@nicolo-ribaudo/eslint-scope-5-internals/-/eslint-scope-5-internals-5.1.1-v1.tgz#dbf733a965ca47b1973177dc0bb6c889edcfb129"
@@ -4666,7 +4676,7 @@ eslint@9.x:
     strip-ansi "^6.0.1"
     text-table "^0.2.0"
 
-eslint@^8.3.0:
+eslint@^8.3.0, eslint@^8.9.0:
   version "8.57.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.57.0.tgz#c786a6fd0e0b68941aaf624596fb987089195668"
   integrity sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==
@@ -6526,6 +6536,11 @@ js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
+jschardet@latest:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-3.1.3.tgz#10c2289fdae91a0aa9de8bba9c59055fd78898d3"
+  integrity sha512-Q1PKVMK/uu+yjdlobgWIYkUOCR1SqUmW9m/eUJNNj4zI2N12i25v8fYpVf+zCakQeaTdBdhnZTFbVIAVZIVVOg==
+
 jsdom@^16.6.0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-16.7.0.tgz#918ae71965424b197c819f8183a754e18977b710"
@@ -6800,7 +6815,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==
 
-lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.7.0:
+lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -9696,6 +9711,11 @@ url-parse@^1.5.3:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+utf8@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/utf8/-/utf8-3.0.0.tgz#f052eed1364d696e769ef058b183df88c87f69d1"
+  integrity sha512-E8VjFIQ/TyQgp+TZfS6l8yp/xWppSAHzidGiRrqe4bK4XP9pTRyKFgGJpO3SN7zdX4DeomTrwaseCHovfpFcqQ==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"
