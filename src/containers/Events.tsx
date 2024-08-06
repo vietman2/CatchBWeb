@@ -1,16 +1,27 @@
 import React from 'react';
-import appImage from '../assets/images/logo.png'; // 앱 이미지 추가
+import eventImage1 from '../assets/images/eventimage1.png';
+import eventImage2 from '../assets/images/eventimage2.png';
 import './Events.css';
 
 const Events: React.FC = () => {
   return (
     <div className="event-container">
-      <div className="image-container">
-        <img src={appImage} alt="App screenshot" className="app-image" />
+      <div className="text-top-left">
+        <div className="title">
+          <span className="highlight">편리</span>하고 <span className="highlight">간편</span>한 야구 레슨 예약,<br />함께 만들어가요 !
+        </div>
       </div>
-      <div className="text-container">
-        <h1>야구에 혁신을 더하다</h1>
-        <p>AI를 더해 간편해진 야구 아카데미 / 레슨 예약 서비스 Catch B</p>
+      <div className="image-bottom-left">
+        <img src={eventImage1} alt="Event 1" className="event-image" />
+      </div>
+      <div className="image-top-right">
+        <img src={eventImage2} alt="Event 2" className="event-image" />
+      </div>
+      <div className="text-bottom-left">
+        <div className="highlight-large">
+          아카데미 정보 제공으로<br />
+          <span className="bold">할인쿠폰</span>과 <span className="bold">포인트</span> 받기 !
+        </div>
       </div>
     </div>
   );

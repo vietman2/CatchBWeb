@@ -1,0 +1,7 @@
+{
+    "extends": ["react-app", "react-app/jest"],
+    "rules": {
+      // 프로젝트에 맞게 규칙을 설정하세요
+    }
+  }
+  

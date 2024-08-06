@@ -7,16 +7,6 @@ import main3 from '../assets/images/community.png';
 import main4 from '../assets/images/promain.png';
 import Tabs from '../components/Tabs'; // Tabs 컴포넌트 임포트
 
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true, // 자동 슬라이드를 활성화
-  autoplaySpeed: 3000,
-};
-
 interface TabContent {
   title: string;
   description: string;
@@ -53,6 +43,13 @@ const tabImageIndex: { [key: string]: number } = {
   '프로모드': 3,
 };
 
+const imageTabIndex: { [key: number]: string } = {
+  0: '홈',
+  1: '예약',
+  2: '커뮤니티',
+  3: '프로모드'
+};
+
 const AppIntro: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState('홈');
   const tabNames = Object.keys(tabContent); // AppIntro 페이지에서 사용할 탭 이름
@@ -65,9 +62,24 @@ const AppIntro: React.FC = () => {
     }
   };
 
+  const handleSliderChange = (current: number) => {
+    setSelectedTab(imageTabIndex[current]);
+  };
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true, // 자동 슬라이드를 활성화
+    autoplaySpeed: 5000,
+    afterChange: handleSliderChange // 슬라이드 변경 후 이벤트 핸들러 추가
+  };
+
   return (
     <div className="app-intro-container">
-      <div className="image-container">
+      <div className="appintro-image-container">
         <div className="phone-frame">
           <Slider ref={sliderRef} {...sliderSettings} className="appintro-slider-container">
             <div>
@@ -88,9 +100,9 @@ const AppIntro: React.FC = () => {
       </div>
       <div className="appintro-text-container">
         <Tabs tabNames={tabNames} onTabClick={handleTabClick} selectedTab={selectedTab} /> {/* Tabs 컴포넌트에 props 전달 */}
-        <h1>{tabContent[selectedTab].title}</h1>
-        <p>{tabContent[selectedTab].description}</p>
-        <h2>{tabContent[selectedTab].highlight}</h2>
+        <div className="appintro-title">{tabContent[selectedTab].title}</div>
+        <div className="appintro-description">{tabContent[selectedTab].description}</div>
+        <div className="appintro-highlight">{tabContent[selectedTab].highlight}</div>
       </div>
     </div>
   );

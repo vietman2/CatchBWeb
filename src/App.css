@@ -1,12 +1,11 @@
 .App {
   text-align: center;
-  background-color: #000c06;
+  background-color: #000C06;
 }
 
 .Section {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  overflow: hidden;
 }
