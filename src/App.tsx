@@ -1,3 +1,4 @@
+import React from 'react';
 import { Element } from 'react-scroll';
 import Header from './containers/Header'; // Header 컴포넌트 추가
 import AppIntro from './containers/AppIntro';
@@ -13,7 +14,9 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <NavBar />
-      <Header />
+      <Element name="Header" className="Section">
+        <Header />
+      </Element>
       <Element name="appIntro" className="Section">
         <AppIntro />
       </Element>
