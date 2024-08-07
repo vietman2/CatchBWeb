@@ -7,3 +7,17 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .how-to-use-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}

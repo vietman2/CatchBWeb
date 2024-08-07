@@ -9,3 +9,9 @@
   align-items: center;
   overflow: hidden;
 }
+
+@media (max-width: 768px) {
+  .Section {
+    padding: 10px;
+  }
+}

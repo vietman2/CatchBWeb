@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import Slider from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import './AppIntro.css';
 import main1 from '../assets/images/main.png';
 import main2 from '../assets/images/reservation.png';
@@ -50,10 +50,12 @@ const imageTabIndex: { [key: number]: string } = {
   3: '프로모드'
 };
 
+type SliderType = Slider & { slickGoTo: (index: number) => void };
+
 const AppIntro: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState('홈');
   const tabNames = Object.keys(tabContent); // AppIntro 페이지에서 사용할 탭 이름
-  const sliderRef = useRef<any>(null); // 슬라이더 참조를 any 타입으로 설정
+  const sliderRef = useRef<SliderType | null>(null);
 
   const handleTabClick = (tab: string) => {
     setSelectedTab(tab);
@@ -66,7 +68,7 @@ const AppIntro: React.FC = () => {
     setSelectedTab(imageTabIndex[current]);
   };
 
-  const sliderSettings = {
+  const sliderSettings: Settings = {
     dots: true,
     infinite: true,
     speed: 800,

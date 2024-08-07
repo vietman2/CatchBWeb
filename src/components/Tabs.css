@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  flex-wrap: wrap; /* 모바일에서 줄 바꿈을 가능하게 함 */
 }
 
 .tab-item {
@@ -20,4 +21,11 @@
 .tab-item.active {
   border-bottom: 2px solid #7ed957;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .tab-item {
+    flex: 1 1 50%; /* 모바일에서 탭 아이템을 두 줄로 배치 */
+    text-align: center;
+  }
 }
