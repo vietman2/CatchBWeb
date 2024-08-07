@@ -33,3 +33,18 @@
   font-size: 14px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .footer-text-container {
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}

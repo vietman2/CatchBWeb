@@ -1,9 +1,8 @@
 .NavBar {
   position: absolute;
-  top: 0%;
-  bottom: auto;
-  left: 0%;
-  right: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 110px;
   max-width: 1200px;
   margin-left: auto;
@@ -45,4 +44,55 @@
 
 .NavBar-item:hover {
   color: #d9d9d9;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+  width: 20px; /* 크기를 작게 조정 */
+  height: 25px;
+}
+
+.hamburger-menu div {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .NavBar-container {
+    padding: 20px;
+  }
+
+  .NavBar-item {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .NavBar-catchb {
+    height: 15px;
+  }
+
+  .NavBar-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .NavBar-items.show {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
 }

@@ -79,3 +79,23 @@
   font-family: 'Noto Sans KR', sans-serif; /* Noto Sans KR 폰트 적용 */
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .app-intro-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .appintro-text-container {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .appintro-title, .appintro-description, .appintro-highlight {
+    font-size: 20px;
+  }
+
+  .phone-frame {
+    max-width: 180px;
+  }
+}
