@@ -34,14 +34,7 @@ const Header: React.FC = () => {
       <div className="header-gradient"></div> {/* 그라디언트 오버레이 추가 */}
       <div className="overlay">
         <div className="header-text-container">
-          <h1>
-            야구에 <span className="highlight-green">혁</span>
-            <span className="highlight-yellow">신</span>을 더하다
-          </h1>
-          <p>
-            AI를 더해 <span className="highlight-yellow">간</span>
-            <span className="highlight-green">편</span>해진 야구 아카데미 / 레슨 예약 서비스
-          </p>
+          <h1>"Catch the Best, Play Your Best."</h1> {/* 영어 슬로건 추가 */}
           <img src={Logo} alt="Catch B" className="catchb-Logo" /> {/* Catch B 이미지 추가 */}
           <button className="download-button">앱 다운로드</button>
         </div>

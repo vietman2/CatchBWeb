@@ -4,22 +4,35 @@
   max-height: 600px;
   max-width: 1200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center; /* 중앙 정렬 */
   padding: 20px 80px;
   color: black;
   background-color: white;
   overflow: hidden; /* 컨테이너를 벗어나는 이미지 숨기기 */
+  box-sizing: border-box;
 }
 
 .events-section {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 중앙 정렬 */
 }
 
 .events-title {
   font-family: 'Do Hyeon', sans-serif;
   font-size: 60px;
-  margin: 20px 0 30px 0;
+  margin: 20px 0 0 0;
   font-weight: bold;
+  text-align: center; /* 중앙 정렬 */
+}
+
+.events-subtitle {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 35px;
+  margin: 0 0 60px 0;
 }
 
 .events-slider {
@@ -27,9 +40,17 @@
   overflow: hidden; /* 슬라이더를 벗어나는 이미지 숨기기 */
 }
 
+.events-slider .slick-slide {
+  display: flex !important;
+  justify-content: center; /* 슬라이더 아이템 중앙 정렬 */
+  align-items: center; /* 슬라이더 아이템 중앙 정렬 */
+  padding: 0 10px; /* 이미지 간의 간격 설정 */
+}
+
 .event-image {
-  width: calc(100% - 40px); /* 이미지 사이 간격 설정 */
-  max-height: 400px; /* 이미지 높이 증가 */
+  width: 100%; /* 이미지 전체 너비 설정 */
+  height: 100%; /* 이미지 전체 높이 설정 */
+  max-height: 400px; /* 이미지 최대 높이 설정 */
   object-fit: cover;
   border-radius: 10px;
 }
