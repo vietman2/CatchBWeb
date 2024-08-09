@@ -36,7 +36,7 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #fff;
-  animation: typing var(--typing-duration) steps(var(--steps)) 1s 1.20 normal both, blink 0.75s step-end infinite;
+  animation: typing var(--typing-duration) steps(var(--steps)) 1s 1 normal both, blink 0.75s step-end infinite;
   display: inline-block;
 }
 

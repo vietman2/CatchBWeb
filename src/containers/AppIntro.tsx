@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Slider, { Settings } from 'react-slick';
 import './AppIntro.css';
 import main1 from '../assets/images/main.png';
@@ -78,6 +78,31 @@ const AppIntro: React.FC = () => {
     autoplaySpeed: 8500,
     afterChange: handleSliderChange // 슬라이드 변경 후 이벤트 핸들러 추가
   };
+
+  useEffect(() => {
+    const container = document.querySelector('.app-intro-container');
+    const textContainer = document.querySelector('.appintro-text-container');
+
+    const handleScroll = () => {
+      const containerRect = container?.getBoundingClientRect();
+      const textContainerRect = textContainer?.getBoundingClientRect();
+      
+      if (containerRect && containerRect.top < window.innerHeight - 100) {
+        container?.classList.add('show');
+      }
+
+      if (textContainerRect && textContainerRect.top < window.innerHeight - 100) {
+        textContainer?.classList.add('show');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // 페이지 로드 시 한 번 실행
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="app-intro-container">

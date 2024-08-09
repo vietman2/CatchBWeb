@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import eventImage1 from '../assets/images/eventimage1.png';
 import eventImage2 from '../assets/images/eventimage2.png';
@@ -17,20 +17,40 @@ const sliderSettings = {
 };
 
 const Event: React.FC = () => {
+  useEffect(() => {
+    const elements = document.querySelectorAll('.fade-up');
+
+    const handleScroll = () => {
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          element.classList.add('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // 페이지 로드 시 한 번 실행
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="event-container">
+    <div className="event-container fade-up">
       <div className="events-section">
-        <div className="events-title">EVENT</div>
-        <div className="events-subtitle">다양한 이벤트에 참여하세요!</div>
-        <Slider {...sliderSettings} className="events-slider">
+        <div className="events-title fade-up">EVENT</div>
+        <div className="events-subtitle fade-up">다양한 이벤트에 참여하세요!</div>
+        <Slider {...sliderSettings} className="events-slider fade-up">
           <div className="event-slick-slide">
-            <img src={eventImage1} alt="Event 1" className="event-image" />
+            <img src={eventImage1} alt="Event 1" className="event-image fade-up" />
           </div>
           <div className="event-slick-slide">
-            <img src={eventImage2} alt="Event 2" className="event-image" />
+            <img src={eventImage2} alt="Event 2" className="event-image fade-up" />
           </div>
           <div className="event-slick-slide">
-            <img src={eventImage3} alt="Event 3" className="event-image" />
+            <img src={eventImage3} alt="Event 3" className="event-image fade-up" />
           </div>
         </Slider>
       </div>
