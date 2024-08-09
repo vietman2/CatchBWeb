@@ -24,8 +24,12 @@
 }
 
 @media (max-width: 768px) {
+  .tabs-container {
+    padding: 10px;
+  }
+
   .tab-item {
-    flex: 1 1 50%; /* 모바일에서 탭 아이템을 두 줄로 배치 */
-    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
   }
 }

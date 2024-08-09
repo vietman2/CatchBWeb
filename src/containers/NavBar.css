@@ -68,31 +68,16 @@
     padding: 20px;
   }
 
-  .NavBar-item {
-    font-size: 12px;
-    padding: 8px 0;
-  }
-
-  .NavBar-catchb {
-    height: 15px;
-  }
-
   .NavBar-items {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #333;
-    border-radius: 5px;
-    padding: 10px;
+    gap: 10px;
   }
 
-  .NavBar-items.show {
-    display: flex;
+  .NavBar-item {
+    font-size: 10px;
   }
 
   .hamburger-menu {
-    display: flex;
+    width: 30px;
+    height: 22px;
   }
 }

@@ -17,9 +17,7 @@ const NavBar: React.FC = () => {
         <div className={`NavBar-items ${menuOpen ? 'show' : ''}`}>
           <Link to="appIntro" smooth={true} duration={500} className="NavBar-item" onClick={toggleMenu}>앱소개</Link>
           <Link to="event" smooth={true} duration={500} className="NavBar-item" onClick={toggleMenu}>이벤트</Link>
-          <Link to="notices" smooth={true} duration={500} className="NavBar-item" onClick={toggleMenu}>공지사항</Link>
           <Link to="preOrder" smooth={true} duration={500} className="NavBar-item" onClick={toggleMenu}>사전예약</Link>
-          <Link to="howToUse" smooth={true} duration={500} className="NavBar-item" onClick={toggleMenu}>캐치비 이용하기</Link>
         </div>
         <div className="hamburger-menu" onClick={toggleMenu}>
           <div></div>
