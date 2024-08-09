@@ -5,10 +5,23 @@
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   color: white;
   padding: 20px 80px;
   box-sizing: border-box;
+  opacity: 0; /* 처음에 보이지 않도록 */
+  transform: translateY(50px); /* 아래에서 올라오는 효과를 위해 초기 위치 설정 */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.app-intro-container.show {
+  opacity: 1;
+  transform: translateY(0); /* 애니메이션 후 원래 위치로 이동 */
+}
+
+.appintro-image-container,
+.appintro-text-container {
+  height: 90%;
 }
 
 .appintro-image-container {
@@ -58,7 +71,15 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  margin-left: 80px;
+  margin-left: 40px;
+  opacity: 0; /* 처음에 보이지 않도록 */
+  transform: translateX(50px); /* 아래에서 올라오는 효과를 위해 초기 위치 설정 */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.appintro-text-container.show {
+  opacity: 1;
+  transform: translateX(0); /* 애니메이션 후 원래 위치로 이동 */
 }
 
 .appintro-title {
@@ -66,36 +87,79 @@
   margin-top: 40px;
   margin-bottom: 20px;
   font-family: 'Do Hyeon', sans-serif; /* Do Hyeon 폰트 적용 */
+  opacity: 0; /* 처음에는 보이지 않도록 */
+  animation: fadeInTitle 2s forwards;
 }
 
 .appintro-description {
-  font-size: 25px;
-  margin-top: 20px;
+  font-size: 20px;
+  margin-top: 40px;
+  font-family: 'Noto Sans KR', sans-serif; 
+  white-space: pre-wrap; /* 띄어쓰기와 줄바꿈을 유지 */
 }
 
-.appintro-highlight {
-  font-size: 25px;
-  margin-top: 20px;
-  font-family: 'Noto Sans KR', sans-serif; /* Noto Sans KR 폰트 적용 */
-  line-height: 1.6;
+.appintro-description div {
+  margin-bottom: 25px; /* 각 문장 사이에 간격 추가 */
+}
+
+.description-line {
+  display: block; /* flex 대신 block으로 변경 */
+}
+
+.description-char {
+  opacity: 0;
+  display: inline-block;
+}
+
+.fade-in-title {
+  animation: fadeInTitle 2s forwards;
+  animation-fill-mode: forwards; /* 애니메이션이 끝난 후에도 상태를 유지 */
+}
+
+@keyframes fadeInTitle {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-description .description-char {
+  animation: fadeInChar 0.4s forwards;
+  animation-fill-mode: forwards; /* 애니메이션이 끝난 후에도 상태를 유지 */
+}
+
+@keyframes fadeInChar {
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
-  .app-intro-container {
-    flex-direction: column;
-    padding: 20px;
-  }
+    .app-intro-container {
+      flex-direction: column;
+      padding: 10px;
+    }
 
-  .appintro-text-container {
-    margin-left: 0;
-    text-align: center;
-  }
+    .appintro-image-container {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
 
-  .appintro-title, .appintro-description, .appintro-highlight {
-    font-size: 20px;
-  }
+    .appintro-text-container {
+      margin-left: 0;
+      text-align: center;
+      padding: 10px;
+    }
 
-  .phone-frame {
-    max-width: 180px;
+    .phone-frame {
+      max-width: 180px;
+    }
+
+    .appintro-title {
+      font-size: 20px;
+    }
+
+    .appintro-description {
+      font-size: 16px;
+    }
   }
-}

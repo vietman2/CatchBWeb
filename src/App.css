@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #000C06;
+  background-color: #000000;
 }
 
 .Section {
@@ -12,6 +12,6 @@
 
 @media (max-width: 768px) {
   .Section {
-    padding: 10px;
+    flex-direction: column;
   }
 }

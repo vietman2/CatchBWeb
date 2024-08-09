@@ -4,7 +4,6 @@ import Header from './containers/Header'; // Header 컴포넌트 추가
 import AppIntro from './containers/AppIntro';
 import Event from './containers/Event'; // Combined 컴포넌트 임포트
 import PreOrder from './containers/PreOrder';
-import HowToUse from './containers/HowToUse';
 import Footer from './containers/Footer';
 import NavBar from './containers/NavBar'; // NavBar 컴포넌트 추가
 import './App.css'; // CSS 파일 추가
@@ -24,9 +23,6 @@ const App: React.FC = () => {
       </Element>
       <Element name="preOrder" className="Section">
         <PreOrder />
-      </Element>
-      <Element name="howToUse" className="Section">
-        <HowToUse />
       </Element>
       <Footer />
     </div>
